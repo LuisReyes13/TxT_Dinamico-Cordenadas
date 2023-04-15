@@ -28,6 +28,9 @@ Partial Class Form1
         Label2 = New Label()
         LblX = New Label()
         LblY = New Label()
+        BackgroundWorker1 = New ComponentModel.BackgroundWorker()
+        Panel1 = New Panel()
+        Button2 = New Button()
         SuspendLayout()
         ' 
         ' Button1
@@ -82,11 +85,31 @@ Partial Class Form1
         LblY.TabIndex = 5
         LblY.Text = "12345"
         ' 
+        ' Panel1
+        ' 
+        Panel1.AutoScroll = True
+        Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Location = New Point(221, 175)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(200, 100)
+        Panel1.TabIndex = 6
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(489, 203)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(75, 23)
+        Button2.TabIndex = 7
+        Button2.Text = "Button2"
+        Button2.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(696, 450)
+        Controls.Add(Button2)
+        Controls.Add(Panel1)
         Controls.Add(LblY)
         Controls.Add(LblX)
         Controls.Add(Label2)
@@ -94,6 +117,7 @@ Partial Class Form1
         Controls.Add(TextBox1)
         Controls.Add(Button1)
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
         ResumeLayout(False)
         PerformLayout()
@@ -105,4 +129,7 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents LblX As Label
     Friend WithEvents LblY As Label
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button2 As Button
 End Class
