@@ -30,7 +30,10 @@ Partial Class Form1
         LblY = New Label()
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
         Panel1 = New Panel()
+        TextBox2 = New TextBox()
+        Label3 = New Label()
         Button2 = New Button()
+        Panel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Button1
@@ -89,14 +92,35 @@ Partial Class Form1
         ' 
         Panel1.AutoScroll = True
         Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Controls.Add(TextBox2)
+        Panel1.Controls.Add(Label3)
         Panel1.Location = New Point(221, 175)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(200, 100)
+        Panel1.Size = New Size(309, 132)
         Panel1.TabIndex = 6
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Location = New Point(110, 15)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(138, 23)
+        TextBox2.TabIndex = 1
+        TextBox2.TextAlign = HorizontalAlignment.Center
+        TextBox2.Visible = False
+        ' 
+        ' Label3
+        ' 
+        Label3.Location = New Point(5, 15)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(100, 23)
+        Label3.TabIndex = 0
+        Label3.Text = "Campodeprueba"
+        Label3.TextAlign = ContentAlignment.MiddleRight
+        Label3.Visible = False
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(489, 203)
+        Button2.Location = New Point(592, 161)
         Button2.Name = "Button2"
         Button2.Size = New Size(75, 23)
         Button2.TabIndex = 7
@@ -119,6 +143,8 @@ Partial Class Form1
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -132,4 +158,6 @@ Partial Class Form1
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button2 As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label3 As Label
 End Class

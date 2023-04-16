@@ -9,27 +9,29 @@
         'myPanel.AutoScroll = True
         'Me.Controls.Add(myPanel)
 
-        Dim xPos As Integer = 10
-        Dim yPos As Integer = 10
+        Dim xPos As Integer = 5
+        Dim yPos As Integer = 15
         Dim textBoxesCount As Integer = Integer.Parse(TextBox1.Text)
 
         For i As Integer = 1 To textBoxesCount
             Dim myLabel As New Label()
-            myLabel.Location = New Point(xPos, yPos)
-            myLabel.Name = $"Lable_{i}"
-            myLabel.Text = $"Label {i}"
-            myLabel.AutoSize = True
+            myLabel.Location = New Point(xPos, yPos + 5)
+            myLabel.TextAlign = HorizontalAlignment.Center
+            myLabel.Name = $"Lbl_{i}"
+            myLabel.Text = $"Label {i}:"
             Panel1.Controls.Add(myLabel)
 
             'myPanel.Controls.Add(myLabel)
 
             Dim myTextBox As New TextBox()
-            myTextBox.Location = New Point(xPos, yPos + 20)
+            myTextBox.Location = New Point(xPos + 100, yPos)
             myTextBox.Name = $"Txt_{i}"
+            myTextBox.TextAlign = HorizontalAlignment.Center
+            myTextBox.Width = 150
             Panel1.Controls.Add(myTextBox)
             'myPanel.Controls.Add(myTextBox)
 
-            yPos += 50
+            yPos += 30
         Next
 
     End Sub
